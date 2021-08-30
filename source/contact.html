@@ -1,0 +1,27 @@
+{% set title="Contact"%}
+{% extends "_layout.html" %}
+{% block main %}
+<div class="row justify-content-center">
+  <div class="col text-center mt-3 mb-3">
+<button type="button" class="btn btn-light" id="showContacts">Contact me</button>
+<div class="d-none mt-3" id="contacts">
+  <p><span id="email">email address</span></p>
+  <span><a href="https://www.linkedin.com/in/sweitler/" target="_blank">LinkedIn</a></span>
+</div>
+  </div>
+</div>
+<script type="application/javascript">
+window.onload = function() {
+var v = [115, 119, 101, 105, 116, 108, 101, 114, 64, 103, 109, 97, 105, 108, 46, 99, 111, 109]
+var qs = document.querySelector.bind(document)
+qs("#showContacts")
+    .addEventListener("click", function () {
+        qs("#contacts").classList.toggle("d-none")
+        qs("#email").innerHTML = (
+            v.map(function (it) { return String.fromCharCode(it) })
+            .join("")
+        )
+    })
+}
+</script>
+{% endblock %}

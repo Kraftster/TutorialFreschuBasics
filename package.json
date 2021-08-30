@@ -1,0 +1,25 @@
+{
+  "name": "tutorialfreschubasics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "build": "nunjucks-build build/ source/",
+    "serve": "light-server -s ./build -w \"source/**/* # npm run build\"",
+    "start": "light-server -s source -p 7000 -w *.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kraftster/TutorialFreschuBasics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kraftster/TutorialFreschuBasics/issues"
+  },
+  "homepage": "https://github.com/Kraftster/TutorialFreschuBasics#readme",
+  "devDependencies": {
+    "light-server": "^2.9.1",
+    "nunjucks-build": "github:fre-sch/nunjucks-build#master"
+  }
+}
